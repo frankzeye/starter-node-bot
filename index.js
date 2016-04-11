@@ -18,22 +18,15 @@ bot.startRTM(function (err, bot, payload) {
   }
 })
 var test = 'just testing'
-
-var currentDate = new Date()
-var day = currentDate.getDate()
-var month = currentDate.getMonth() + 1
-var year = currentDate.getFullYear()
+var albumArray = [Weezer, Bowie, Chili, Pizza Man, Coolio]
+var randonAlbum = albumArray[Math.floor(Math.random() * albumArray.length)]
 
 controller.on('bot_channel_join', function (bot, message) {
   bot.reply(message, "I'm here!")
 })
 
-controller.hears(['test'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, test)
-})
-
-controller.hears(['weezer'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, year)
+controller.hears(['album'], ['direct_mention'], function (bot, message) {
+  bot.reply(message, randonAlbum)
 })
 
 controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
