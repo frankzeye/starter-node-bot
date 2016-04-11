@@ -19,7 +19,7 @@ bot.startRTM(function (err, bot, payload) {
 })
 
 var test = 'just testing'
-var albumArray = ['Weezer', 'Bowie', 'Chili', 'Pizza Man', 'Coolio']
+var albumArray = ['LCD Soundsystem - Sound of Silver', 'Tom Petty - Wildflowers', 'The Head and the Heart - The Head and the Heart','Sufjan Stevens - Illinois','Cake - Prolonging the Magic','The Format Dog Problems','The Avett Brothers - Second Gleam','Death Cab for Cutie - Transatlantism','Red Hot Chili Peppers - By the Way','The Violet Archers - End of Part One']
 var randomAlbum
 
 controller.on('bot_channel_join', function (bot, message) {
