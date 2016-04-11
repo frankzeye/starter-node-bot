@@ -26,7 +26,7 @@ controller.on('bot_channel_join', function (bot, message) {
 })
 
 controller.hears(['album'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, albumArray[1])
+  bot.reply(message, test)
 })
 
 controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
