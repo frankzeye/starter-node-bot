@@ -17,6 +17,7 @@ bot.startRTM(function (err, bot, payload) {
     throw new Error('Could not connect to Slack')
   }
 })
+var test = 'just testing'
 
 var currentDate = new Date()
 var day = currentDate.getDate()
@@ -25,6 +26,10 @@ var year = currentDate.getFullYear()
 
 controller.on('bot_channel_join', function (bot, message) {
   bot.reply(message, "I'm here!")
+})
+
+controller.hears(['test'], ['direct_mention'], function (bot, message) {
+  bot.reply(message, test)
 })
 
 controller.hears(['weezer'], ['direct_mention'], function (bot, message) {
