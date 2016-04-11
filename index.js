@@ -19,7 +19,7 @@ bot.startRTM(function (err, bot, payload) {
 })
 
 var test = 'just testing'
-var albumArray = [Weezer, Bowie, Chili, Pizza Man, Coolio]
+var albumArray = ['Weezer', 'Bowie', 'Chili', 'Pizza Man', 'Coolio']
 
 controller.on('bot_channel_join', function (bot, message) {
   bot.reply(message, "I'm here!")
