@@ -20,13 +20,14 @@ bot.startRTM(function (err, bot, payload) {
 
 var test = 'just testing'
 var albumArray = ['Weezer', 'Bowie', 'Chili', 'Pizza Man', 'Coolio']
+var randomAlbum = albumArray[Math.floor(Math.random() * albumArray.length)]
 
 controller.on('bot_channel_join', function (bot, message) {
   bot.reply(message, "I'm here!")
 })
 
 controller.hears(['album'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, albumArray[1])
+  bot.reply(message, randomAlbum)
 })
 
 controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
