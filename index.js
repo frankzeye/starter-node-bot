@@ -18,13 +18,17 @@ bot.startRTM(function (err, bot, payload) {
   }
 })
 
+var currentDate = new Date()
+var day = currentDate.getDate()
+var month = currentDate.getMonth() + 1
+var year = currentDate.getFullYear()
+
 controller.on('bot_channel_join', function (bot, message) {
   bot.reply(message, "I'm here!")
 })
 
 controller.hears(['weezer'], ['direct_mention'], function (bot, message) {
-  var d = new Date("October 13, 2014 11:13:00")
-  bot.reply(message, d)
+  bot.reply(message, year)
 })
 
 controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
