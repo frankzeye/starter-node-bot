@@ -17,6 +17,7 @@ bot.startRTM(function (err, bot, payload) {
     throw new Error('Could not connect to Slack')
   }
 })
+
 var test = 'just testing'
 var albumArray = [Weezer, Bowie, Chili, Pizza Man, Coolio]
 var randomAlbum = albumArray[Math.floor(Math.random() * albumArray.length)]
