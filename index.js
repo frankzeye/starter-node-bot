@@ -19,13 +19,14 @@ bot.startRTM(function (err, bot, payload) {
 })
 
 var test = 'just testing'
+var albumArray = [Weezer, Bowie, Chili, Pizza Man, Coolio]
 
 controller.on('bot_channel_join', function (bot, message) {
   bot.reply(message, "I'm here!")
 })
 
 controller.hears(['album'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, test)
+  bot.reply(message, albumArray[1])
 })
 
 controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
