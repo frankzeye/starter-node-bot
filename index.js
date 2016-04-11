@@ -23,7 +23,8 @@ controller.on('bot_channel_join', function (bot, message) {
 })
 
 controller.hears(['weezer'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, 'The Red album!')
+  var d = new Date("October 13, 2014 11:13:00")
+  bot.reply(message, d)
 })
 
 controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
