@@ -35,6 +35,10 @@ controller.hears(['rocky'], ['direct_message','direct_mention','mention','ambien
   bot.reply(message, 'Honestly slackbot, I think you\'re being a bit harsh on the guy.')
 })
 
+controller.hears(['frank'], ['direct_mention'], function (bot, message) {
+  bot.reply(message, 'FRANK!')
+})
+
 controller.hears('.*', ['mention'], function (bot, message) {
   bot.reply(message, 'You really do care about me. :heart:')
 })
