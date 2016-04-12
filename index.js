@@ -36,7 +36,7 @@ controller.hears(['rocky sucks'], ['direct_message','direct_mention','mention','
 })
 
 controller.hears(['frank'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, 'FRANK!')
+  bot.reply(message, 'Yes FRANK!')
 })
 
 controller.hears(['add'], ['direct_message'], function (bot, message) {
