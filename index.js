@@ -19,7 +19,7 @@ bot.startRTM(function (err, bot, payload) {
 })
 
 var test = 'just testing'
-var albumArray = ['LCD Soundsystem - Sound of Silver', 'Tom Petty - Wildflowers', 'The Head and the Heart - The Head and the Heart','Sufjan Stevens - Illinois','Cake - Prolonging the Magic','The Format Dog Problems','The Avett Brothers - Second Gleam','Death Cab for Cutie - Transatlantism','Red Hot Chili Peppers - By the Way','The Violet Archers - End of Part One']
+var albumArray = []
 var randomAlbum
 
 controller.on('bot_channel_join', function (bot, message) {
@@ -40,7 +40,10 @@ controller.hears(['frank'], ['direct_mention'], function (bot, message) {
 })
 
 controller.hears(['add'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, message - 'add ')
+  randomAlbum.push(message)
+  randomAlbum = albumArray[Math.floor(Math.random() * albumArray.length)]
+  bot.reply(message, randomAlbum)
+  bot.reply(message, message)
 })
 
 controller.hears('.*', ['mention'], function (bot, message) {
