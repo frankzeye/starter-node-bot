@@ -31,11 +31,7 @@ controller.hears(['album'], ['direct_mention'], function (bot, message) {
   bot.reply(message, randomAlbum)
 })
 
-controller.hears(['rocky'], ['direct_message','direct_mention','mention','ambient'], function (bot, message) {
-  bot.reply(message, 'Honestly slackbot, I think you\'re being a bit harsh on the guy.')
-})
-
-controller.hears(['rocky'], ['direct_message','direct_mention','mention','ambient'], function (bot, message) {
+controller.hears(['rocky sucks'], ['direct_message','direct_mention','mention','ambient'], function (bot, message) {
   bot.reply(message, 'Honestly slackbot, I think you\'re being a bit harsh on the guy.')
 })
 
